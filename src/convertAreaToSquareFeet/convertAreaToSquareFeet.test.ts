@@ -14,5 +14,9 @@ describe('convertAreaToSquareFeet', () => {
     expect(() => convertAreaToSquareFeet(-200)).toThrow('Area cannot be negative');
     expect(() => convertAreaToSquareFeet(-150)).toThrow('Area cannot be negative');
   });
-  
+  it('Verify that decimal area values in square meters are accurately converted to square feet', () => {
+    expect(convertAreaToSquareFeet(1.5)).toBeCloseTo(16.14585);
+    expect(convertAreaToSquareFeet(2.75)).toBeCloseTo(29.600725);
+    expect(convertAreaToSquareFeet(0.01)).toBeCloseTo(0.107639);
+  });
 });

@@ -9,4 +9,8 @@ describe("calculateCanvasSize", () => {
     const result = calculateCanvasSize("0", "0");
     expect(result).toEqual(0);
   });
+  it("Verify that calculateCanvasSize should handle negative length correctly", () => {
+    const result = calculateCanvasSize("-5", "10");
+    expect(result).toEqual(-50);
+  });
 });

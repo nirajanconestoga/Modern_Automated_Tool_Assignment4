@@ -6,4 +6,7 @@ describe('convertAreaToSquareFeet', () => {
     expect(convertAreaToSquareFeet(200)).toBeCloseTo(2152.78);
     expect(convertAreaToSquareFeet(150)).toBeCloseTo(1614.585);
   });
+  it('Verify that an input of 0 square meters returns 0 square feet', () => {
+    expect(convertAreaToSquareFeet(0)).toBe(0);
+  });
 });

@@ -17,5 +17,8 @@ describe("calculateCanvasPerimeter", () => {
     const result = calculateCanvasPerimeter("a", "10");
     expect(result).toBeNaN();
   });
-  
+  it("Verify that calculateCanvasPerimeter should handle decimal length and width correctly", () => {
+    const result = calculateCanvasPerimeter("1.5", "2.5");
+    expect(result).toEqual(8);
+  });
 });

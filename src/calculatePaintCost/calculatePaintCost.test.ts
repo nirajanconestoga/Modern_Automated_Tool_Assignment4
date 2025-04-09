@@ -6,4 +6,7 @@ describe('calculatePaintCost', () => {
     expect(calculatePaintCost(20, 7.5)).toBe(150);
     expect(calculatePaintCost(15, 10)).toBe(150);
   });
+  it('Verify that calculatePaintCost should return 0 when paint required is 0', () => {
+    expect(calculatePaintCost(0, 5)).toBe(0);
+  });
 });

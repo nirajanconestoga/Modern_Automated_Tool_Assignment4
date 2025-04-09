@@ -5,5 +5,9 @@ describe("calculateCanvasPerimeter", () => {
     const result = calculateCanvasPerimeter("10", "100");
     expect(result).toEqual(220);
   });
+  it("Verify that calculateCanvasPerimeter should return 0 when both length and width are zero", () => {
+    const result = calculateCanvasPerimeter("0", "0");
+    expect(result).toEqual(0);
+  });
   
 });

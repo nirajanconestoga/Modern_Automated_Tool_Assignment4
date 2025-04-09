@@ -9,4 +9,7 @@ describe('calculatePaintCost', () => {
   it('Verify that calculatePaintCost should return 0 when paint required is 0', () => {
     expect(calculatePaintCost(0, 5)).toBe(0);
   });
+  it('Verify that calculatePaintCost should return 0 when cost per liter is 0', () => {
+    expect(calculatePaintCost(10, 0)).toBe(0);
+  });
 });

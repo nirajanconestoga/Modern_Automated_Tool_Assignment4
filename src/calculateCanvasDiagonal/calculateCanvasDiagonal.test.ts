@@ -7,4 +7,7 @@ describe('calculateCanvasDiagonal', () => {
   it ('Verify that calculateCanvasDiagonal should calculate the correct diagonal when length is zero and width is positive', () => {
     expect(calculateCanvasDiagonal('0', '4')).toBe(4);
   });
+  it('Verify that calculateCanvasDiagonal should handle negative length correctly when calculating diagonal', () => {
+    expect(calculateCanvasDiagonal('-3', '4')).toBe(5);
+  });
 });

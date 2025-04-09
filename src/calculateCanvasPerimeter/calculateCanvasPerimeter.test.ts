@@ -1,9 +1,8 @@
 import calculateCanvasPerimeter from "./calculateCanvasPerimeter";
 
 describe("calculateCanvasSize", () => {
-  test("returns correct result", () => {
+  it("Verify that calculateCanvasPerimeter should return the correct canvas size for positive length and width", () => {
     const result = calculateCanvasPerimeter("10", "100");
-
-    expect(result).toEqual(1000);
-  })
+    expect(result).toEqual(220);
+  });
 });

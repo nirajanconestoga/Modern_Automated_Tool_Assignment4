@@ -5,4 +5,8 @@ describe("paint required calculator", () => {
     const result = paintRequiredCalculator(50, 10);
     expect(result).toEqual(5);
   });
+  it("Verify that the paint required returns 0 when the area is 0", () => {
+    const result = paintRequiredCalculator(0, 10);
+    expect(result).toEqual(0);
+  });
 });

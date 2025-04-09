@@ -19,6 +19,6 @@ describe("calculateCanvasSize", () => {
   });
   it("Verify that calculateCanvasSize should handle decimal values for length and width correctly", () => {
     const result = calculateCanvasSize("3.5", "2.5");
-    expect(result).toBeCloseTo(12);
+    expect(result).toBeCloseTo(8.75);
   });  
 });

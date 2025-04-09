@@ -12,10 +12,10 @@ describe('estimatePaintingTime', () => {
   it('Verify that the painting time returns 0 for an area of 0', () => {
     expect(estimatePaintingTime(0, 10)).toBe(0);
   });
-  it('Verify that the painting time handles negative values correctly', () => {
-    expect(estimatePaintingTime(-100, 10)).toBe(-10);
-    expect(estimatePaintingTime(100, -10)).toBe(-10);
-    expect(estimatePaintingTime(-100, -10)).toBe(10);
+  it('Verify that an error is thrown for negative area or negative painting speed', () => {
+    expect(() => estimatePaintingTime(-100, 10)).toThrow('Area and painting speed must be non-negative values');
+    expect(() => estimatePaintingTime(100, -10)).toThrow('Area and painting speed must be non-negative values');
+    expect(() => estimatePaintingTime(-100, -10)).toThrow('Area and painting speed must be non-negative values');
   });
 });
 

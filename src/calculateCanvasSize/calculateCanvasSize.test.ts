@@ -13,4 +13,8 @@ describe("calculateCanvasSize", () => {
     const result = calculateCanvasSize("-5", "10");
     expect(result).toEqual(-50);
   });
+  it("Verify that calculateCanvasSize should return NaN when length or width is a non-numeric string", () => {
+    const result = calculateCanvasSize("a", "10");
+    expect(result).toBeNaN();
+  });
 });

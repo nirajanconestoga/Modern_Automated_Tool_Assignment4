@@ -13,5 +13,9 @@ describe("calculateCanvasPerimeter", () => {
     const result = calculateCanvasPerimeter("-5", "10");
     expect(result).toEqual(10);
   });
+  it("Verify that calculateCanvasPerimeter should return NaN when length or width is a non-numeric string", () => {
+    const result = calculateCanvasPerimeter("a", "10");
+    expect(result).toBeNaN();
+  });
   
 });
